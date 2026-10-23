@@ -1,0 +1,33 @@
+{
+  "orgId": "fe288386-3d26-4eab-b5d2-51eeab82a7f9",
+  "organization": "MH & MD",
+  "cases": {
+    "appName": "官网后端数据",
+    "appId": "94f0bd43-0d05-41e7-a6d4-7f0e118360c8",
+    "knowledgeId": "69c23b0902d00e8e3d3562f6",
+    "worksheetId": "6870b5ea457a020ca39bed6a",
+    "titleField": "5f6c38d6ee73ce0001d257f4",
+    "statusField": "5fa3c602b4647e000154eed2",
+    "publicStatusKey": "10",
+    "publicStatusName": "发布中",
+    "urlField": "688334668f08f551f3bacd7a",
+    "brandField": "697844e2337e5dd4ac63ee52",
+    "localeField": "69784529337e5dd4ac63f3d3",
+    "industryField": "6870b9350c4033754377967f",
+    "scenariosField": "6870b9e32a131c89da4485ae",
+    "bodyFields": ["5f6c37ec7455730001c1223d", "5fd34201c535cd32e27c96c3", "6870ba77366f9b1792e6880f"]
+  },
+  "solutions": {
+    "appName": "明道云知识库",
+    "appId": "18f7d95b-eb6b-4201-8c86-ca56732966b7",
+    "knowledgeId": "69faad6bf657e90b926a81c0",
+    "worksheetId": "5fe2caf821796ba9c19ec136",
+    "titleField": "5fe2caf821796ba9c19ec12e",
+    "statusField": "5fe8a30dbb37838cfdbd0a4e",
+    "publicStatusKey": "20d643d8-f388-4b8f-b142-c425242cfd16",
+    "publicStatusName": "公开上架",
+    "urlField": "692e52d92328de1fe0c43635",
+    "scenariosField": "5fe2caf821796ba9c19ec12a",
+    "bodyFields": ["5fe2caf821796ba9c19ec124"]
+  }
+}

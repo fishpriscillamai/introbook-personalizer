@@ -1,0 +1,7 @@
+{
+  "version": "1.0.0",
+  "releaseDate": "2026-10-23",
+  "standardSourceSnapshot": "2026-10-19",
+  "templatePolicyVersion": "2026-10-19-adapted-20261023",
+  "validation": "Chinese and English end-to-end generation accepted by the user; Work Buddy and Windows actual generation remain unverified."
+}

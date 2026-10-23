@@ -1,0 +1,140 @@
+{
+  "version": "1.0.0",
+  "files": [
+    {
+      "path": ".github/workflows/ci.yml",
+      "sha256": "2676309b5944e39923409a2b9d057efbeb3682273d4fcb9acf3220ecdf44326d"
+    },
+    {
+      "path": ".gitignore",
+      "sha256": "9276db39723547a057e8c0de180fd9b07b93b4a5a4e0e235b97875d6c082a4c7"
+    },
+    {
+      "path": "CHANGELOG.md",
+      "sha256": "09b08c4fcc0efaece0cfb6f8a9957cbd9ceeb380afb9a75d5b034f5f0ef82851"
+    },
+    {
+      "path": "README.md",
+      "sha256": "a68d143cd727e213ed45d9e5cd6f6d4e76ea10680f3ba2bb54f57cbc6bf5cc34"
+    },
+    {
+      "path": "THIRD_PARTY_NOTICES.md",
+      "sha256": "93f82227c554c9b849a5034b999c2378e97dad8fef86d961b53f7b36ebcfbf87"
+    },
+    {
+      "path": "scripts/build_packages.py",
+      "sha256": "9ac058b11b3ddfb6bf63469cf470d1b7980bcf608417134f8400a48f12c31238"
+    },
+    {
+      "path": "scripts/fetch_web_sources.py",
+      "sha256": "d7a18080284345bda24a90c313b9c1bf37a342e7a458af4d54dc400af9aa1292"
+    },
+    {
+      "path": "scripts/prepare_public_release.py",
+      "sha256": "3b573c526f8210d13c06e9096adc4b3a2646aa8f382552f50c0d1a979358188f"
+    },
+    {
+      "path": "scripts/review_customer_introbook.mjs",
+      "sha256": "2bcc013ddee3ece573f97d0dfb8fb0fb5f619a6507648f36d418da10194ce9a8"
+    },
+    {
+      "path": "scripts/verify_browser.mjs",
+      "sha256": "623187ec57686297577703c9fd7a18b01cbaa8c9c61461d94db4917078576d0a"
+    },
+    {
+      "path": "scripts/verify_official_templates.mjs",
+      "sha256": "0825c7e0d3d17dee47bcaaa9b1631b7cee919bda7a5fca843487d57c9f813d6e"
+    },
+    {
+      "path": "scripts/verify_web_sources.mjs",
+      "sha256": "1355455ea7cbe7a97cd96c452175d87e4480d43e90e89fb9326c7d5f77de0259"
+    },
+    {
+      "path": "skills/introbook-personalizer/SKILL.md",
+      "sha256": "da549cf311f6a2c194126a5c7630f9ccffeb5e9888198459c123100cacc87d66"
+    },
+    {
+      "path": "skills/introbook-personalizer/assets/navigation.js",
+      "sha256": "d4b10dd6002bdd6dee03f93669aec17c7178148c691870c3fb758b51903abb59"
+    },
+    {
+      "path": "skills/introbook-personalizer/assets/templates/.gitkeep",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "skills/introbook-personalizer/references/knowledge-sources.json",
+      "sha256": "06af8b022b62950fdac22aee05cef5de269cfbfea1b2cf4f68e33cd2d835736d"
+    },
+    {
+      "path": "skills/introbook-personalizer/references/retrieval.md",
+      "sha256": "7b5777c6780e7504ef215179b2a5e70f5edcfe15e1fa1513378fadcccbdff19f"
+    },
+    {
+      "path": "skills/introbook-personalizer/references/template-policy.md",
+      "sha256": "4fa6dcaa358e30e447b5d9b2f0a461d78f1cad3eeb92958dae1dda42cae34e65"
+    },
+    {
+      "path": "skills/introbook-personalizer/references/workflow.md",
+      "sha256": "9c23bf7566ea3765ecf437c0032d649c7144b1dfb23def0b0b83c0f5d33da534"
+    },
+    {
+      "path": "skills/introbook-personalizer/scripts/core.mjs",
+      "sha256": "04ed9413b4e2bc8aac9b072d3cf478c43f8f0d277d6f47b879dc879d2221d93c"
+    },
+    {
+      "path": "skills/introbook-personalizer/scripts/html.mjs",
+      "sha256": "800a22a97eefcf4b6f213f06ceca5a0de00fdcea4064c3f2eb338930cc695bf2"
+    },
+    {
+      "path": "skills/introbook-personalizer/scripts/install.mjs",
+      "sha256": "7b6d09e003f6b33bacf6db7e180e9e13ccbdd8caa5c061513f2a9fce9166eb36"
+    },
+    {
+      "path": "skills/introbook-personalizer/scripts/introbook.mjs",
+      "sha256": "c4d0f3baf1d9ebf950be91b871d05f06be72e19d6b9215dc1efa339fae5db820"
+    },
+    {
+      "path": "skills/introbook-personalizer/scripts/knowledge.mjs",
+      "sha256": "da007ad097b7836506fd3409838017e622871981b99efd4fd3e750f1389d4dda"
+    },
+    {
+      "path": "skills/introbook-personalizer/scripts/official-web.mjs",
+      "sha256": "3d264273cff020c6521a7864afde45a41b756a16bf0d09e04072218efe39f3e8"
+    },
+    {
+      "path": "skills/introbook-personalizer/scripts/resources.mjs",
+      "sha256": "b63f64f62f45246a16ae6e8f1ada9220528d6688b00e8be0ec2a81cc92b36432"
+    },
+    {
+      "path": "skills/introbook-personalizer/version.json",
+      "sha256": "b8fd76d5713712e9cca306ac7ad5f6125e00d83b1050a5f363914fddd0f4cb65"
+    },
+    {
+      "path": "tests/core.test.mjs",
+      "sha256": "30805d11ed18ed93eb085d9791061ca17c019cc84be5e2b8b4554d099e7de870"
+    },
+    {
+      "path": "tests/distribution.test.mjs",
+      "sha256": "8e102998483a004c6ec86c5d56456d1bb9232b11b41a6b52408cb23a315f550e"
+    },
+    {
+      "path": "tests/fixtures.mjs",
+      "sha256": "90799d79a81437a89db5983730ecb5eb3215f8dffb35822ac7cc74247b2bee85"
+    },
+    {
+      "path": "tests/official-web.test.mjs",
+      "sha256": "7c3d59686ca8a99be5d001a7661771256efba2e3042bbb170992cc20e83fba19"
+    },
+    {
+      "path": "tests/public-release.test.mjs",
+      "sha256": "4c8512694c9c5ea08e656d58a20ca8ba3c00eac0b65fa21c4f60122b970e5c9e"
+    },
+    {
+      "path": "tests/test_web_fetch.py",
+      "sha256": "8dfeff268baadeb25c088e166a0e9435b13be2ac3f7078ee8b4cb700ed105270"
+    }
+  ],
+  "templateFilesInGit": 0,
+  "customerOutputsIncluded": false,
+  "rawKnowledgeRecordsIncluded": false
+}

@@ -1,0 +1,11 @@
+.DS_Store
+node_modules/
+__pycache__/
+*.pyc
+.work/
+dist/
+outputs/
+materials/
+*.zip
+skills/introbook-personalizer/assets/templates/*
+!skills/introbook-personalizer/assets/templates/.gitkeep

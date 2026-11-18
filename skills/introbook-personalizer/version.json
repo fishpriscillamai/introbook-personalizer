@@ -1,7 +1,10 @@
 {
-  "version": "1.0.0",
-  "releaseDate": "2026-10-23",
-  "standardSourceSnapshot": "2026-10-19",
-  "templatePolicyVersion": "2026-10-19-adapted-20261023",
-  "validation": "Chinese and English end-to-end generation accepted by the user; Work Buddy and Windows actual generation remain unverified."
+  "version": "1.1.2",
+  "releaseDate": "2026-11-18",
+  "standardSourceSnapshot": {
+    "mingdao": "2026-11-16",
+    "nocoly": "2026-10-19"
+  },
+  "templatePolicyVersion": "2026-11-18-hap13",
+  "validation": "Updated user-supplied standard; structural and static checks required; visual review pending due to browser file URL policy."
 }

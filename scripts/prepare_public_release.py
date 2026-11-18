@@ -31,7 +31,7 @@ def export(output):
             continue
         if source.is_symlink():
             raise ValueError(f'Symlink in skill source: {relative}')
-        if source.is_file() and source.name != '.DS_Store':
+        if source.is_file() and source.name not in {'.DS_Store', 'package-state.json'}:
             if source.suffix not in ('.md', '.json', '.mjs', '.js', '.yaml', '.yml'):
                 raise ValueError(f'Unexpected public source file: {relative}')
             target = output / 'skills/introbook-personalizer' / relative
@@ -44,7 +44,7 @@ def export(output):
         copy_code(ROOT / 'scripts' / name, output / 'scripts' / name)
     for name in TESTS:
         copy_code(ROOT / 'tests' / name, output / 'tests' / name)
-    for name in ('README.md', 'CHANGELOG.md', 'THIRD_PARTY_NOTICES.md'):
+    for name in ('README.md', 'CHANGELOG.md', 'THIRD_PARTY_NOTICES.md', '使用说明.md'):
         source = ROOT / 'publication' / name if (ROOT / 'publication').is_dir() else ROOT / name
         shutil.copyfile(source, output / name)
     workflow = ROOT / 'publication/github-ci.yml' if (ROOT / 'publication').is_dir() else ROOT / '.github/workflows/ci.yml'

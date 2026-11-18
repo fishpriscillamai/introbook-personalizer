@@ -24,7 +24,7 @@ def build(output: Path, include_templates: bool = False, latest_templates: bool 
     for item in sorted(SKILL.rglob('*')):
         if item.is_symlink():
             raise ValueError(f'Symlinks may not enter a portable package: {item.name}')
-        if not item.is_file() or item.name in {'.DS_Store', '.gitkeep'}:
+        if not item.is_file() or item.name in {'.DS_Store', '.gitkeep', 'package-state.json'}:
             continue
         relative = item.relative_to(SKILL)
         if relative.parts[:2] == ('assets', 'templates') and not include_templates:
@@ -32,6 +32,10 @@ def build(output: Path, include_templates: bool = False, latest_templates: bool 
         if relative.parts[:2] == ('assets', 'templates') and latest_templates and not any(parent in item.parents for parent in selected):
             continue
         files.append((item, str(Path('introbook-personalizer') / relative)))
+    for name in ('使用说明.md', 'THIRD_PARTY_NOTICES.md'):
+        guide = ROOT / name
+        if guide.is_file():
+            files.append((guide, name))
     templates = [name for _, name in files if name.endswith('/manifest.json') and '/assets/templates/' in name]
     version_file = SKILL / 'version.json'
     version = json.loads(version_file.read_text())['version'] if version_file.exists() else 'unversioned'

@@ -14,8 +14,9 @@ test('public export has only reviewed source and portable tools; packages select
  const exported=path.join(temp,'public');
  await exec('python3',[path.join(root,'scripts/prepare_public_release.py'),'--output',exported]);
  await assert.rejects(exec('python3',[path.join(root,'scripts/prepare_public_release.py'),'--output',exported]),/exist/i);
+ const expectedVersion=JSON.parse(await fs.readFile(path.join(root,'skills/introbook-personalizer/version.json'),'utf8')).version;
  const manifest=JSON.parse(await fs.readFile(path.join(exported,'publication-manifest.json'),'utf8'));
- assert.equal(manifest.version,'1.0.0');assert.equal(manifest.templateFilesInGit,0);
+ assert.equal(manifest.version,expectedVersion);assert.equal(manifest.templateFilesInGit,0);
  assert(!manifest.files.some(f=>/(?:^|\/)(?:materials|outputs|\.work|deliveries|sources\.json|run\.json)(?:\/|$)/.test(f.path)));
  for(const item of manifest.files){const data=await fs.readFile(path.join(exported,item.path));assert.equal(createHash('sha256').update(data).digest('hex'),item.sha256);assert(!data.toString().includes(root));}
  const skill=path.join(exported,'skills/introbook-personalizer');
@@ -30,8 +31,8 @@ test('public export has only reviewed source and portable tools; packages select
  await exec('python3',['-c',`import pathlib,sys,zipfile,json
 with zipfile.ZipFile(pathlib.Path(sys.argv[1])/'introbook-personalizer-codex.zip') as z:
  state=json.loads(z.read('introbook-personalizer/package-state.json'))
- assert state['version']=='1.0.0' and state['standardTemplates']==2
+ assert state['version']==sys.argv[2] and state['standardTemplates']==2
  assert any('/a-new/' in n for n in z.namelist())
  assert not any('/z-old/' in n for n in z.namelist())
-`,packages]);
+`,packages,expectedVersion]);
 });

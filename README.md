@@ -2,32 +2,24 @@
 
 根据客户行业、业务场景和需求，生成明道云 HAP / Nocoly 个性化离线 HTML 产品手册。支持中文、英文与双语；交付一个可断网打开的 HTML。
 
-当前稳定版：**v1.0.0**。中英文真实需求样本已完成当前 Codex 桌面环境的端到端生成、内容与视觉检查，并经用户确认。
+当前版本：**v1.1.2（2026-11-18）**。明道云已适配 2026-11-16 版 HAP 13；Nocoly 保留独立标准。新版结构和静态校验已完成，逐页视觉检查仍待完成。
 
 ## 安装
 
-推荐从 [Releases](https://github.com/fishpriscillamai/introbook-personalizer/releases/latest) 下载对应安装包：
+**无需 GitHub 账号**：下载完整的 [IntroBook-Personalizer-v1.1.2.zip](https://github.com/fishpriscillamai/introbook-personalizer/releases/download/v1.1.2/IntroBook-Personalizer-v1.1.2.zip)，解压后按 [本地安装与使用说明](使用说明.md) 操作，其中有可直接复制给 AI 的安装指令。
 
-| 文件 | 用途 |
-|---|---|
-| `introbook-personalizer-codex.zip` | Codex / 当前合并版 Codex、ChatGPT 桌面工作环境 |
-| `introbook-personalizer-workbuddy.zip` | Work Buddy 技能导入包，仍需实际宿主验证 |
-| `SHA256SUMS` | 安装包校验值 |
+安装包包含每品牌最新已登记模板：明道云 HAP 13（20 页、中英文切换，登记版本 `2026-11-18-hap13`）和 Nocoly 独立标准（2026-10-19 来源、2026-10-23 策略）。包内不含客户成品、案例原始记录或凭据。
 
-正式安装包包含两品牌各自的最新已登记模板，每品牌中英文各 27 页。标准源快照日期为 **2026-10-19**，策略日期为 **2026-10-23**，不代表线上资料每天自动更新。包内不含客户定制成品、案例原始记录或凭据。
+GitHub 源码不包含大型品牌模板；网页的 Download ZIP 也是源码包。[Releases](https://github.com/fishpriscillamai/introbook-personalizer/releases) 同时保留历史版本，请选择 v1.1.2。源码使用者可按 [模板规则](skills/introbook-personalizer/references/template-policy.md) 提供并登记已审阅标准源。
 
-Codex：解压后保留目录，运行：
+需要 Node.js 20+、能访问本地文件并执行命令的 AI 环境。Codex 本地安装：
 
 ```sh
 node introbook-personalizer/scripts/install.mjs
 node introbook-personalizer/scripts/introbook.mjs status
 ```
 
-安装器建立目录链接，不覆盖已有的不同同名 Skill。Windows 使用目录 junction；Windows 实机安装、Work Buddy 实际导入与生成尚未完成，不宣称已验收。
-
-Work Buddy：将对应 ZIP 导入其技能管理入口，再连接具有读取权限的 HAP Personal MCP。两个包使用同一份源码。
-
-从 GitHub 克隆的源码仓库不带大型品牌模板文件；可使用 Release 安装包，或按 [操作流程](skills/introbook-personalizer/references/workflow.md) 接收、审阅并登记标准源。不要把测试样本当作标准手册。
+上述路径用于完整 ZIP 的解压目录；源码仓库需改为 `skills/introbook-personalizer/...`。安装器建立目录链接并拒绝覆盖不同的同名目录；其他宿主按其实际安装规范操作。Windows 实机、Work Buddy 导入尚未验收。
 
 ## 使用
 
@@ -41,7 +33,8 @@ Work Buddy：将对应 ZIP 导入其技能管理入口，再连接具有读取�
 
 ## 固定规则
 
-- 技术架构和“价值八方式”整页沿用标准素材；产品参数、认证、安全、部署、统计和公司事实不因客户改写。
+- HAP 13 原标准 20 页（含四个固定功能示例）保留，仅在原 P16 客户案例入口后连续插入定制页。案例使用 case-flow、方案使用 partner-solution 版式，新增页不带底部小字。
+- 技术架构和旧版“价值八方式”整页沿用标准素材；产品参数、认证、安全、部署、统计和公司事实不因客户改写。
 - 客户案例和伙伴解决方案分别选 2–3 个；缺少严格同行业案例时可采用同场景跨行业证据，明确借鉴范围。
 - 优先呈现可核验的量化成果；不把实施规模或方案目标写成既有成果，也不把他人收益承诺给新客户。
 - 伙伴方案标题为“伙伴解决方案：方案名称” / “Partner Solution: Solution Name”；公司名称是主标题下**额外新增**的副标题，不替换流程图小标题。案例/方案可局部调整布局。

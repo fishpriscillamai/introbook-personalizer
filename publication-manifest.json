@@ -1,5 +1,5 @@
 {
-  "version": "1.0.0",
+  "version": "1.1.2",
   "files": [
     {
       "path": ".github/workflows/ci.yml",
@@ -11,19 +11,19 @@
     },
     {
       "path": "CHANGELOG.md",
-      "sha256": "09b08c4fcc0efaece0cfb6f8a9957cbd9ceeb380afb9a75d5b034f5f0ef82851"
+      "sha256": "0b4396c33b9c366b89a9ec79e5448d6b11b6ed58897ff84293da758b92b58d62"
     },
     {
       "path": "README.md",
-      "sha256": "a68d143cd727e213ed45d9e5cd6f6d4e76ea10680f3ba2bb54f57cbc6bf5cc34"
+      "sha256": "d0b91ee8ef613052e7c03c1356f6340732bb97d7adc82f827b1770a7066bce95"
     },
     {
       "path": "THIRD_PARTY_NOTICES.md",
-      "sha256": "93f82227c554c9b849a5034b999c2378e97dad8fef86d961b53f7b36ebcfbf87"
+      "sha256": "312fecd0e392923ea1de52d55318d9c936b2bb5b96bc8cbf207bbce028dfc945"
     },
     {
       "path": "scripts/build_packages.py",
-      "sha256": "9ac058b11b3ddfb6bf63469cf470d1b7980bcf608417134f8400a48f12c31238"
+      "sha256": "7f37ff3ca695a371966024095c56677b20d99a164322ec4a7e11b35f5dae006d"
     },
     {
       "path": "scripts/fetch_web_sources.py",
@@ -31,7 +31,7 @@
     },
     {
       "path": "scripts/prepare_public_release.py",
-      "sha256": "3b573c526f8210d13c06e9096adc4b3a2646aa8f382552f50c0d1a979358188f"
+      "sha256": "1aea39943ad8a21fc6238d6ccbec2058c1c0f856ab73c9d4e67bec161a36d6f9"
     },
     {
       "path": "scripts/review_customer_introbook.mjs",
@@ -51,7 +51,11 @@
     },
     {
       "path": "skills/introbook-personalizer/SKILL.md",
-      "sha256": "da549cf311f6a2c194126a5c7630f9ccffeb5e9888198459c123100cacc87d66"
+      "sha256": "a2f2a2631934e7a233e6308b249bf1517796cc307fac997573b59706aa882c79"
+    },
+    {
+      "path": "skills/introbook-personalizer/assets/hap13-layouts.json",
+      "sha256": "c2059389a39b7be58433552265efcfa521bf044e1fd7d0b4e9dd4581f1dff4d0"
     },
     {
       "path": "skills/introbook-personalizer/assets/navigation.js",
@@ -60,6 +64,10 @@
     {
       "path": "skills/introbook-personalizer/assets/templates/.gitkeep",
       "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "skills/introbook-personalizer/references/hap13-layouts.md",
+      "sha256": "cb5a850c9b74e8afaa7229d9af1cfbb03a27dc2a7c0a3397959a3c582a0a97c7"
     },
     {
       "path": "skills/introbook-personalizer/references/knowledge-sources.json",
@@ -71,15 +79,19 @@
     },
     {
       "path": "skills/introbook-personalizer/references/template-policy.md",
-      "sha256": "4fa6dcaa358e30e447b5d9b2f0a461d78f1cad3eeb92958dae1dda42cae34e65"
+      "sha256": "c95e9f39738d9adeee2fb824f299485a0e26e5c664cf170cc3c0a44b2a28bf8c"
     },
     {
       "path": "skills/introbook-personalizer/references/workflow.md",
-      "sha256": "9c23bf7566ea3765ecf437c0032d649c7144b1dfb23def0b0b83c0f5d33da534"
+      "sha256": "99d6deea7839607b6f7a723ef6a9fece476cceeb5eb12b937d38243e46b2466f"
     },
     {
       "path": "skills/introbook-personalizer/scripts/core.mjs",
-      "sha256": "04ed9413b4e2bc8aac9b072d3cf478c43f8f0d277d6f47b879dc879d2221d93c"
+      "sha256": "9535fe11eab5a11f8652d103fa2aa04da11cbd34c9b4cd86b76ec0b3c4b1d67e"
+    },
+    {
+      "path": "skills/introbook-personalizer/scripts/hap13.mjs",
+      "sha256": "d6f557e8bb8cc0b245b37ac75cc167900bfbdcc66e45dfed209b26d5a7b013fe"
     },
     {
       "path": "skills/introbook-personalizer/scripts/html.mjs",
@@ -91,7 +103,7 @@
     },
     {
       "path": "skills/introbook-personalizer/scripts/introbook.mjs",
-      "sha256": "c4d0f3baf1d9ebf950be91b871d05f06be72e19d6b9215dc1efa339fae5db820"
+      "sha256": "632bc5020fdd915c420a27057b9469c72be020c2e1f8b84ab6188b4e897c2d48"
     },
     {
       "path": "skills/introbook-personalizer/scripts/knowledge.mjs",
@@ -103,11 +115,11 @@
     },
     {
       "path": "skills/introbook-personalizer/scripts/resources.mjs",
-      "sha256": "b63f64f62f45246a16ae6e8f1ada9220528d6688b00e8be0ec2a81cc92b36432"
+      "sha256": "5b0dd2361274d29f20385fa430f82b04da06836e3cbbc1b3c93d5036fe339f12"
     },
     {
       "path": "skills/introbook-personalizer/version.json",
-      "sha256": "b8fd76d5713712e9cca306ac7ad5f6125e00d83b1050a5f363914fddd0f4cb65"
+      "sha256": "4471ee6f7b4ecc002b0b6fa1e734647cb7834d1d78a325789af39c77488c2737"
     },
     {
       "path": "tests/core.test.mjs",
@@ -127,11 +139,15 @@
     },
     {
       "path": "tests/public-release.test.mjs",
-      "sha256": "4c8512694c9c5ea08e656d58a20ca8ba3c00eac0b65fa21c4f60122b970e5c9e"
+      "sha256": "22471d796846602f9f0250ac0471cc40941759ce642f6797742628abf7938f33"
     },
     {
       "path": "tests/test_web_fetch.py",
       "sha256": "8dfeff268baadeb25c088e166a0e9435b13be2ac3f7078ee8b4cb700ed105270"
+    },
+    {
+      "path": "使用说明.md",
+      "sha256": "f0c4b9b7610b284f0dd5babe8d2eb5a6531e537ee9ee6dd266aac7b537f62e0b"
     }
   ],
   "templateFilesInGit": 0,

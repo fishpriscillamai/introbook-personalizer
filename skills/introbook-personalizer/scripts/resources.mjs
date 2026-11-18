@@ -91,11 +91,19 @@ export async function bundleHtml(input, root = path.dirname(input)) {
   }
   assertOffline(result); return result;
 }
-export function assertOffline(html) {
+export function assertOffline(html, {allowInlineMp4=false} = {}) {
   const { nodes } = parse(html);
   for (const n of nodes) {
-    if (['base','iframe','object','embed','audio','video'].includes(n.tag) || n.attrs.srcset) throw Error('Unsupported external resource mechanism');
-    for (const key of ['src','poster',...(n.tag === 'link' ? ['href'] : [])]) if (n.attrs[key]) validData(n.attrs[key]);
+    if (['base','iframe','object','embed','audio'].includes(n.tag) || (n.tag==='video'&&!allowInlineMp4) || n.attrs.srcset) throw Error('Unsupported external resource mechanism');
+    if(n.tag==='video') {
+      for(const key of ['src','data-en-src']) {
+        if(!n.attrs[key] || !/^data:video\/mp4;base64,[A-Za-z0-9+/]+={0,2}$/.test(n.attrs[key])) throw Error('Reviewed videos must be self-contained bilingual MP4 resources');
+        const bytes=Buffer.from(n.attrs[key].split(',')[1],'base64');
+        if(bytes.length<12||bytes.toString('ascii',4,8)!=='ftyp') throw Error('Invalid MP4 resource');
+      }
+      if(n.attrs['data-en-poster'])validData(n.attrs['data-en-poster']);
+    }
+    for (const key of ['src','poster',...(n.tag === 'link' ? ['href'] : [])]) if (n.attrs[key] && !(n.tag==='video'&&key==='src'&&allowInlineMp4)) validData(n.attrs[key]);
     if (n.tag === 'script') { if (n.attrs.src) throw Error('External script'); checkScript(html.slice(n.openEnd,n.closeStart)); }
     if (n.tag === 'a' && n.attrs.href && !/^(?:#|https?:\/\/|mailto:|tel:)/i.test(n.attrs.href)) throw Error('Unsafe/nonportable hyperlink');
     if (['use','image'].includes(n.tag)) for (const key of ['href','xlink:href']) if (n.attrs[key] && !n.attrs[key].startsWith('#')) validData(n.attrs[key]);

@@ -3,6 +3,7 @@ import path from 'node:path';
 import crypto from 'node:crypto';
 import { parse, patches, attrPatch, annotate, inventory, pageNodes, escapeText } from './html.mjs';
 import { bundleHtml, assertOffline, assetUri, inside } from './resources.mjs';
+import { loadHap13, renderHap13 } from './hap13.mjs';
 import { validateRequest, assertSource } from './knowledge.mjs';
 
 export const sha = text => crypto.createHash('sha256').update(text).digest('hex');
@@ -57,6 +58,7 @@ export async function loadTemplate(dir) {
   const [html, policyText, manifest] = await Promise.all([fs.readFile(path.join(dir,'index.html'),'utf8'),fs.readFile(path.join(dir,'policy.json'),'utf8'),readJson(path.join(dir,'manifest.json'))]);
   if (sha(html) !== manifest.templateSha256 || sha(policyText) !== manifest.policySha256) throw Error('Standard template or page policy has been modified');
   const policy = JSON.parse(policyText), book = inventory(html);
+  if(manifest.engine==='hap13')return loadHap13({dir,html,policy,manifest,book});
   if (JSON.stringify(classify(book,policy)) !== JSON.stringify(policy)) throw Error('Page policy violates hard protection rules');
   assertOffline(html); return {html,policy,manifest,book};
 }
@@ -152,6 +154,7 @@ function sourceCheck(edit,rule,sources,request,createdAt) {
 export function render(t,run,changes,sources) {
   if (run.templateSha256!==t.manifest.templateSha256) throw Error('Run baseline fingerprint mismatch');
   if (!Array.isArray(sources)||!Array.isArray(changes.pages)||!Array.isArray(changes.remove)||!Array.isArray(changes.add)) throw Error('Invalid change/source documents');
+  if(t.manifest.engine==='hap13')return renderHap13(t,run,changes,sources);
   let html=t.html;
   const requested=run.request.locale==='bilingual'?['zh','en']:[run.request.locale];
   const removed=new Set(), changed=new Set();

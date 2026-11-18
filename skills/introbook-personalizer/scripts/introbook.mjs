@@ -34,6 +34,7 @@ async function templateFor(o,r) {
   const all=await listTemplates(o.templates??defaults);
   const matches=all.templates.filter(t=>t.brand===(r.brand??'mingdao')&&(!o.version||t.version===o.version)).sort((a,b)=>b.registeredAt.localeCompare(a.registeredAt));
   if(!matches.length) throw Error('No current standard template is registered for this brand. Obtain the latest source from the user; do not substitute historical IntroBooks.');
+  if(!o.version&&(r.brand??'mingdao')==='mingdao'&&matches[0].engine!=='hap13')throw Error('The current Mingdao HAP13 standard is missing. Register the reviewed 2026-11-16 source; do not fall back to the old IntroBook.');
   return matches[0].dir;
 }
 export async function main(argv=process.argv.slice(2)) {
@@ -42,6 +43,7 @@ export async function main(argv=process.argv.slice(2)) {
     case 'status': return listTemplates(o.templates??defaults);
     case 'adapt-web': { const {adaptOfficialWeb}=await import('./official-web.mjs'); return adaptOfficialWeb({input:need(o,'input'),root:o.root??path.dirname(o.input),brand:need(o,'brand'),output:need(o,'output')}); }
     case 'inspect': return inventory(annotate(await bundleHtml(need(o,'input'),o.root??path.dirname(o.input)),o.locale??'zh'));
+    case 'register-hap13': { const {registerHap13}=await import('./hap13.mjs'); return registerHap13({input:need(o,'input'),templates:o.templates??defaults,version:o.version,brand:o.brand??'mingdao'}); }
     case 'register': return register({input:need(o,'input'),root:o.root??path.dirname(o.input),templates:o.templates??defaults,brand:need(o,'brand'),version:need(o,'version'),locale:o.locale??'zh',policy:o.policy?await readJson(o.policy):undefined,provenance:o.provenance?await readJson(o.provenance):undefined});
     case 'prepare': { const request=await readJson(need(o,'request')); return prepare({template:await templateFor(o,request),workdir:need(o,'workdir'),request}); }
     case 'search-plan': return searchPlan(await readJson(need(o,'request')));
@@ -49,7 +51,7 @@ export async function main(argv=process.argv.slice(2)) {
     case 'apply': { const workdir=need(o,'workdir'); return apply({workdir,changes:await readJson(o.changes??path.join(workdir,'changes.json')),sources:await readJson(o.sources??path.join(workdir,'sources.json'))}); }
     case 'validate': return validate(need(o,'workdir'));
     case 'deliver': return deliver({workdir:need(o,'workdir'),output:need(o,'output'),review:need(o,'review')});
-    default: throw Error('Commands: status, adapt-web, inspect, register, prepare, search-plan, normalize-source, apply, validate, deliver. See references/workflow.md.');
+    default: throw Error('Commands: status, adapt-web, inspect, register, register-hap13, prepare, search-plan, normalize-source, apply, validate, deliver. See references/workflow.md.');
   }
 }
 if(process.argv[1]&&await fs.realpath(process.argv[1])===await fs.realpath(fileURLToPath(import.meta.url))) {

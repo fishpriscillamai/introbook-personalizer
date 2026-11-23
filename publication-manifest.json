@@ -1,5 +1,5 @@
 {
-  "version": "1.1.2",
+  "version": "1.1.3",
   "files": [
     {
       "path": ".github/workflows/ci.yml",
@@ -11,15 +11,15 @@
     },
     {
       "path": "CHANGELOG.md",
-      "sha256": "0b4396c33b9c366b89a9ec79e5448d6b11b6ed58897ff84293da758b92b58d62"
+      "sha256": "e841c2e6448be9ba55c37d6662fdf4a86202497496fd9645fd1d099023a92d28"
     },
     {
       "path": "README.md",
-      "sha256": "d0b91ee8ef613052e7c03c1356f6340732bb97d7adc82f827b1770a7066bce95"
+      "sha256": "3d787e86ce77e827a34f5d6239fc68505ff5e8009324054ba2cf85e5fbca1498"
     },
     {
       "path": "THIRD_PARTY_NOTICES.md",
-      "sha256": "312fecd0e392923ea1de52d55318d9c936b2bb5b96bc8cbf207bbce028dfc945"
+      "sha256": "f3fe81d5d2ebf28a5798892deea1e9165d28ae45e6266453084f486e9e0b85ee"
     },
     {
       "path": "scripts/build_packages.py",
@@ -51,7 +51,7 @@
     },
     {
       "path": "skills/introbook-personalizer/SKILL.md",
-      "sha256": "a2f2a2631934e7a233e6308b249bf1517796cc307fac997573b59706aa882c79"
+      "sha256": "d56b97260873e1e3d96e05eb02eed2b3a8911a7145e63076d1f4df5aaadf4903"
     },
     {
       "path": "skills/introbook-personalizer/assets/hap13-layouts.json",
@@ -67,7 +67,7 @@
     },
     {
       "path": "skills/introbook-personalizer/references/hap13-layouts.md",
-      "sha256": "cb5a850c9b74e8afaa7229d9af1cfbb03a27dc2a7c0a3397959a3c582a0a97c7"
+      "sha256": "d660d01077d6f996fa51f672c15ce92bb54c7b7133ba6b138a5dac2532028d95"
     },
     {
       "path": "skills/introbook-personalizer/references/knowledge-sources.json",
@@ -79,11 +79,11 @@
     },
     {
       "path": "skills/introbook-personalizer/references/template-policy.md",
-      "sha256": "c95e9f39738d9adeee2fb824f299485a0e26e5c664cf170cc3c0a44b2a28bf8c"
+      "sha256": "aede1410fc3d5c0b720bb212f0b684d7881886a52f03459184cabba264b25241"
     },
     {
       "path": "skills/introbook-personalizer/references/workflow.md",
-      "sha256": "99d6deea7839607b6f7a723ef6a9fece476cceeb5eb12b937d38243e46b2466f"
+      "sha256": "31153e22beb395c767477b744b07612ecf2eb8eeef9a6148d299f0bb0475941a"
     },
     {
       "path": "skills/introbook-personalizer/scripts/core.mjs",
@@ -91,7 +91,7 @@
     },
     {
       "path": "skills/introbook-personalizer/scripts/hap13.mjs",
-      "sha256": "d6f557e8bb8cc0b245b37ac75cc167900bfbdcc66e45dfed209b26d5a7b013fe"
+      "sha256": "ad3b614588c5b98d895d35dc09b49e0fd38f5ac90bae3d8e3ab1843c7f03feeb"
     },
     {
       "path": "skills/introbook-personalizer/scripts/html.mjs",
@@ -119,7 +119,7 @@
     },
     {
       "path": "skills/introbook-personalizer/version.json",
-      "sha256": "4471ee6f7b4ecc002b0b6fa1e734647cb7834d1d78a325789af39c77488c2737"
+      "sha256": "60018d5d23cf10f649c93b5bc34896a41810cb74ad794d78acaf6997d23b5b51"
     },
     {
       "path": "tests/core.test.mjs",
@@ -147,7 +147,7 @@
     },
     {
       "path": "使用说明.md",
-      "sha256": "f0c4b9b7610b284f0dd5babe8d2eb5a6531e537ee9ee6dd266aac7b537f62e0b"
+      "sha256": "702da016f6b5cb5922e89d512b9f90ecc9f655a0c8f34586aa42afcb2a3399e5"
     }
   ],
   "templateFilesInGit": 0,

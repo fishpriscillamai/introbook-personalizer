@@ -34,7 +34,7 @@ async function templateFor(o,r) {
   const all=await listTemplates(o.templates??defaults);
   const matches=all.templates.filter(t=>t.brand===(r.brand??'mingdao')&&(!o.version||t.version===o.version)).sort((a,b)=>b.registeredAt.localeCompare(a.registeredAt));
   if(!matches.length) throw Error('No current standard template is registered for this brand. Obtain the latest source from the user; do not substitute historical IntroBooks.');
-  if(!o.version&&(r.brand??'mingdao')==='mingdao'&&matches[0].engine!=='hap13')throw Error('The current Mingdao HAP13 standard is missing. Register the reviewed 2026-11-16 source; do not fall back to the old IntroBook.');
+  if(!o.version&&(r.brand??'mingdao')==='mingdao'&&matches[0].engine!=='hap13')throw Error('The current Mingdao HAP13 standard is missing. Register the current reviewed HAP13 source; do not fall back to the old IntroBook.');
   return matches[0].dir;
 }
 export async function main(argv=process.argv.slice(2)) {

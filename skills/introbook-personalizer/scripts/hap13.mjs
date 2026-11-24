@@ -7,12 +7,13 @@ import {assertOffline} from './resources.mjs';
 import {assertSource} from './knowledge.mjs';
 
 const sha=x=>crypto.createHash('sha256').update(x).digest('hex');
-export const SOURCE_SHA='161ba59e10b2a1ed3564266de1dc72a480e4e30fc3c3c49f87b87a11929f2c5f';
+export const SOURCE_SHA='e714761c7d0519c04799d8161853aa4bdcac36d311093cab51f6b59eb03f8f69';
 const REVIEWED_SOURCES=new Map([
   ['2ca6321a4c69aa08f035920c9b59a38d4ce83028b5cf71aec50c8374eb911add',{date:'2026-11-13',skip:'.en-legacy,.restored-content,style,script'}],
   ['d5b2b8a1c87123f4ce6a8cd54e3afd0bbca0f113bfdb47312c5b9df4472a4dd7',{date:'2026-11-16',version:'2026-11-16-hap13',skip:'.en-legacy,.intro-refresh,style,script'}],
   ['450622ca53b227e48f12aa528afe69f03989d7dc81424ea1057909c32c5f7225',{date:'2026-11-16',version:'2026-11-18-hap13',skip:'.en-legacy,.intro-refresh,style,script'}],
-  [SOURCE_SHA,{date:'2026-11-19',version:'2026-11-23-hap13',skip:'.en-legacy,.intro-refresh,style,script'}]
+  ['161ba59e10b2a1ed3564266de1dc72a480e4e30fc3c3c49f87b87a11929f2c5f',{date:'2026-11-19',version:'2026-11-23-hap13',skip:'.en-legacy,.intro-refresh,style,script'}],
+  [SOURCE_SHA,{date:'2026-11-24',version:'2026-11-24-hap13',skip:'.en-legacy,.intro-refresh,style,script'}]
 ]);
 export const ANCHOR='hap13-standard-16';
 export const FIXED_EXAMPLES=['ex-mfg','ex-dist','ex-med','ex-edu'];

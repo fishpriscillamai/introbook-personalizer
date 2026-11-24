@@ -1,5 +1,5 @@
 {
-  "version": "1.1.3",
+  "version": "1.1.4",
   "files": [
     {
       "path": ".github/workflows/ci.yml",
@@ -11,11 +11,11 @@
     },
     {
       "path": "CHANGELOG.md",
-      "sha256": "e841c2e6448be9ba55c37d6662fdf4a86202497496fd9645fd1d099023a92d28"
+      "sha256": "00193999004c2c630af5e0311c24f9c0ba2f7301854f0bd12914b59d079837ba"
     },
     {
       "path": "README.md",
-      "sha256": "3d787e86ce77e827a34f5d6239fc68505ff5e8009324054ba2cf85e5fbca1498"
+      "sha256": "d9ef92d2dfc1c6c1d60f5bd58f56214a7283a504a31c3124751f0f90fac24d69"
     },
     {
       "path": "THIRD_PARTY_NOTICES.md",
@@ -51,7 +51,7 @@
     },
     {
       "path": "skills/introbook-personalizer/SKILL.md",
-      "sha256": "d56b97260873e1e3d96e05eb02eed2b3a8911a7145e63076d1f4df5aaadf4903"
+      "sha256": "12984ab2b5e9e17b0472b1138374927febf3fd486c1697ebdf67b79ddff56d84"
     },
     {
       "path": "skills/introbook-personalizer/assets/hap13-layouts.json",
@@ -67,7 +67,7 @@
     },
     {
       "path": "skills/introbook-personalizer/references/hap13-layouts.md",
-      "sha256": "d660d01077d6f996fa51f672c15ce92bb54c7b7133ba6b138a5dac2532028d95"
+      "sha256": "84d4503c3dd191ea1da2e446401d093199d273ccb2d89d3aab0aff81577a2fba"
     },
     {
       "path": "skills/introbook-personalizer/references/knowledge-sources.json",
@@ -79,11 +79,11 @@
     },
     {
       "path": "skills/introbook-personalizer/references/template-policy.md",
-      "sha256": "aede1410fc3d5c0b720bb212f0b684d7881886a52f03459184cabba264b25241"
+      "sha256": "e53482718a4fbf41dac8302b47d78326039ba9f64dbeb8df373f0a765448dba8"
     },
     {
       "path": "skills/introbook-personalizer/references/workflow.md",
-      "sha256": "31153e22beb395c767477b744b07612ecf2eb8eeef9a6148d299f0bb0475941a"
+      "sha256": "1ad31b6a0c4e252a98b68daafa0925f33386b5bfbece63f25c5387b96bece21f"
     },
     {
       "path": "skills/introbook-personalizer/scripts/core.mjs",
@@ -91,7 +91,7 @@
     },
     {
       "path": "skills/introbook-personalizer/scripts/hap13.mjs",
-      "sha256": "ad3b614588c5b98d895d35dc09b49e0fd38f5ac90bae3d8e3ab1843c7f03feeb"
+      "sha256": "f309973d79e96b560de992bc552dd04821a24118d799076bcb66fcc1cef5bafe"
     },
     {
       "path": "skills/introbook-personalizer/scripts/html.mjs",
@@ -103,7 +103,7 @@
     },
     {
       "path": "skills/introbook-personalizer/scripts/introbook.mjs",
-      "sha256": "632bc5020fdd915c420a27057b9469c72be020c2e1f8b84ab6188b4e897c2d48"
+      "sha256": "e74d298cb23e34b4864da58ee2c9e94ea80f33817e108d37e5212ba0bbc4254d"
     },
     {
       "path": "skills/introbook-personalizer/scripts/knowledge.mjs",
@@ -119,7 +119,7 @@
     },
     {
       "path": "skills/introbook-personalizer/version.json",
-      "sha256": "60018d5d23cf10f649c93b5bc34896a41810cb74ad794d78acaf6997d23b5b51"
+      "sha256": "417576541df51b26dbff0a11c67b8c0e998d0bde8082d1097a9e646313e1e508"
     },
     {
       "path": "tests/core.test.mjs",
@@ -147,7 +147,7 @@
     },
     {
       "path": "使用说明.md",
-      "sha256": "702da016f6b5cb5922e89d512b9f90ecc9f655a0c8f34586aa42afcb2a3399e5"
+      "sha256": "755013d259936e70e6f34c47f2d8fcb85fb4d16132f33de8ff6e2e4ef9f335ca"
     }
   ],
   "templateFilesInGit": 0,

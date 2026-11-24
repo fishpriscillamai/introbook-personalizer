@@ -2,15 +2,15 @@
 
 根据客户行业、业务场景和需求，生成明道云 HAP / Nocoly 个性化离线 HTML 产品手册。支持中文、英文与双语；交付一个可断网打开的 HTML。
 
-当前版本：**v1.1.3（2026-11-23）**。明道云已适配 2026-11-19 版 HAP 13；Nocoly 保留独立标准。新版结构和静态校验已完成，逐页视觉检查仍待完成。
+当前版本：**v1.1.4（2026-11-24）**。明道云已适配 2026-11-24 版 HAP 13；Nocoly 保留独立标准。新版结构和静态校验已完成，逐页视觉检查仍待完成。
 
 ## 安装
 
-**无需 GitHub 账号**：下载完整的 [IntroBook-Personalizer-v1.1.3.zip](https://github.com/fishpriscillamai/introbook-personalizer/releases/download/v1.1.3/IntroBook-Personalizer-v1.1.3.zip)，解压后按 [本地安装与使用说明](使用说明.md) 操作，其中有可直接复制给 AI 的安装指令。
+**无需 GitHub 账号**：下载完整的 [IntroBook-Personalizer-v1.1.4.zip](https://github.com/fishpriscillamai/introbook-personalizer/releases/download/v1.1.4/IntroBook-Personalizer-v1.1.4.zip)，解压后按 [本地安装与使用说明](使用说明.md) 操作，其中有可直接复制给 AI 的安装指令。
 
-安装包包含每品牌最新已登记模板：明道云 HAP 13（20 页、中英文切换，登记版本 `2026-11-23-hap13`）和 Nocoly 独立标准（2026-10-19 来源、2026-10-23 策略）。包内不含客户成品、案例原始记录或凭据。
+安装包包含每品牌最新已登记模板：明道云 HAP 13（20 页、中英文切换，登记版本 `2026-11-24-hap13`）和 Nocoly 独立标准（2026-10-19 来源、2026-10-23 策略）。包内不含客户成品、案例原始记录或凭据。
 
-GitHub 源码不包含大型品牌模板；网页的 Download ZIP 也是源码包。[Releases](https://github.com/fishpriscillamai/introbook-personalizer/releases) 同时保留历史版本，请选择 v1.1.3。源码使用者可按 [模板规则](skills/introbook-personalizer/references/template-policy.md) 提供并登记已审阅标准源。
+GitHub 源码不包含大型品牌模板；网页的 Download ZIP 也是源码包。[Releases](https://github.com/fishpriscillamai/introbook-personalizer/releases) 同时保留历史版本，请选择 v1.1.4。源码使用者可按 [模板规则](skills/introbook-personalizer/references/template-policy.md) 提供并登记已审阅标准源。
 
 需要 Node.js 20+、能访问本地文件并执行命令的 AI 环境。Codex 本地安装：
 
